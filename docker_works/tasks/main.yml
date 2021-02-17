@@ -20,7 +20,7 @@
     password: '{{ dhub_passwd }}'
 
 - name: Prepare my build directory
-  files:
+  file:
     path: '{{ dest_dockerfile }}'
     state: directory
     mode: 0777 
