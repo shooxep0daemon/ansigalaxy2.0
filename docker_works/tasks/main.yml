@@ -21,7 +21,7 @@
  
 - name: Copy my dockerfile
   copy:
-    src: dockerfile
+    src: Dockerfile
     dest: /tmp/buildme
 
 - name: Ensure image is build and pushed from target to DH
