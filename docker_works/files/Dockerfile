@@ -5,5 +5,3 @@ WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package
 WORKDIR target
 RUN cp hello-1.0.war $CATALINA_HOME/webapps/
-WORKDIR $CATALINA_HOME
-CMD ["catalina.sh" ,"run"]
