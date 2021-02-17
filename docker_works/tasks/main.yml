@@ -5,7 +5,7 @@
     src: Dockerfile
     dest: '{{ dest_dockerfile }}/Dockerfile'
 
-- name: Ensure image is build and pushed from target to DH
+- name: Ensure image is build and pushed from Builderhost to DH
   docker_image:
     name: '{{ my_boxfuse }}'
     path: '{{ dest_dockerfile }}/'

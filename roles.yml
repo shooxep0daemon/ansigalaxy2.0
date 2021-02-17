@@ -4,15 +4,15 @@
   become: yes
 
   roles: 
-   - docker_works
    - dockerhubconn
    - dockerenvo
+   - docker_works
 
 - name: runner env server
   hosts: builder
   become: yes
 
   roles:
-   - docker_host
    - dockerhubconn
    - dockerenvo
+  - docker_host
