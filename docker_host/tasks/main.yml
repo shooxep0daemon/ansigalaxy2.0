@@ -1,2 +1,9 @@
 ---
 # tasks file for docker_host
+- name: Pull an image fromy our DH and run it
+  docker_image:
+    image: shooxep0daemon/boxfuse:latest
+    source: pull
+    state: started
+    ports:
+      - "8080:8080"
