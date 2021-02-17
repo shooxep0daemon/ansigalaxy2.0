@@ -19,11 +19,16 @@
     email: '{{ dhub_email }}'
     password: '{{ dhub_passwd }}'
  
+- name: Copy my dockerfile
+  copy:
+    src: dockerfile
+    dest: /tmp/buildme
+
 - name: Ensure image is build and pushed from target to DH
   docker_image:
     name: '{{ my_boxfuse }}'
     build:
-      path: ./Dockerfile
+      path: /tmp/buildme
       source: build
     push: yes
     
