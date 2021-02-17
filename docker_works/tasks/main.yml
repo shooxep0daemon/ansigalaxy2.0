@@ -16,6 +16,6 @@
   docker_image:
     build:
       path: Dockerfile
-    name: '{{ 'my_boxfuse' }}'
+    name: '{{ my_boxfuse }}'
     push: yes
     source: build
