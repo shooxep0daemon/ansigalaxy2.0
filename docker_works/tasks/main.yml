@@ -2,9 +2,9 @@
 # tasks file for docker_works
 - name: Ensure that we have access to the DOCKERHUB
   docker_login:
-    username: {{ dhub_user }}
-    email: {{ dhub_email }}
-    password: {{ dhub_passwd }}
+    username: '{{ dhub_user }}'
+    email: '{{ dhub_email }}'
+    password: '{{ dhub_passwd }}'
 
 - name: Ensure that DOCKER daemon is present
   apt:
@@ -16,6 +16,6 @@
   docker_image:
     build:
       path: Dockerfile
-    name: {{ 'my_boxfuse' }}
+    name: '{{ 'my_boxfuse' }}'
     push: yes
     source: build
