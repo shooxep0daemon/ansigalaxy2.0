@@ -35,6 +35,6 @@
   docker_image:
     name: '{{ my_boxfuse }}'
     path: '{{ dest_dockerfile }}/'
-    source: build
+    state: present
     push: yes
     
