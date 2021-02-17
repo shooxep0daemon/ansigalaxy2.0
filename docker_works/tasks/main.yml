@@ -1,11 +1,5 @@
 ---
 # tasks file for docker_works
-- name: Ensure that we have access to the DOCKERHUB
-  docker_login:
-    username: '{{ dhub_user }}'
-    email: '{{ dhub_email }}'
-    password: '{{ dhub_passwd }}'
-
 - name: Ensure that DOCKER daemon is present
   apt:
     pkg:
@@ -18,6 +12,12 @@
   pip:
     name: docker-py
     state: present
+
+- name: Ensure that we have access to the DOCKERHUB
+  docker_login:
+    username: '{{ dhub_user }}'
+    email: '{{ dhub_email }}'
+    password: '{{ dhub_passwd }}'
  
 - name: Ensure image is build and pushed from target to DH
   docker_image:
