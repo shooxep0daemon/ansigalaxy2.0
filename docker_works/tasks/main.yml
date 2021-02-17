@@ -22,13 +22,14 @@
 - name: Copy my dockerfile
   copy:
     src: Dockerfile
-    dest: /tmp/buildme
+    dest: /tmp/buildme/Dockerfile
 
 - name: Ensure image is build and pushed from target to DH
   docker_image:
     name: '{{ my_boxfuse }}'
     build:
-      path: /tmp/buildme
+      path: /tmp/buildme/Dockerfile
       source: build
+    state: present
     push: yes
     
