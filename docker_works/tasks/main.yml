@@ -13,12 +13,6 @@
     name: docker-py
     state: present
 
-- name: Ensure that we have access to the DOCKERHUB
-  docker_login:
-    username: '{{ dhub_user }}'
-    email: '{{ dhub_email }}'
-    password: '{{ dhub_passwd }}'
-
 - name: Prepare my build directory
   file:
     path: '{{ dest_dockerfile }}'
