@@ -6,6 +6,7 @@
   roles: 
    - docker_works
    - dockerhubconn
+   - dockerenvo
 
 - name: runner env server
   hosts: builder
@@ -14,3 +15,4 @@
   roles:
    - docker_host
    - dockerhubconn
+   - dockerenvo

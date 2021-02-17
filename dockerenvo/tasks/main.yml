@@ -1,2 +1,14 @@
 ---
 # tasks file for dockerenvo
+- name: Ensure that DOCKER daemon is present
+  apt:
+    pkg:
+      - docker.io
+      - python-pip
+    state: present
+    update_cache: yes
+
+- name: Ensure module docker-py is present
+  pip:
+    name: docker-py
+    state: present
