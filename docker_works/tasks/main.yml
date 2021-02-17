@@ -33,9 +33,8 @@
 
 - name: Ensure image is build and pushed from target to DH
   docker_image:
-    build:
-      path: '{{ dest_dockerfile }}/'
     name: '{{ my_boxfuse }}'
+    path: '{{ dest_dockerfile }}'
     source: build
     push: yes
     
