@@ -37,7 +37,7 @@
     name: '{{ my_boxfuse }}'
     build:
       path: '{{ dest_dockerfile }}'
-      source: build
     state: present
+    source: build
     push: yes
     
