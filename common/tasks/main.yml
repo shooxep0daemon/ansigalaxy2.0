@@ -1,0 +1,11 @@
+---
+# tasks file for common
+- name: install packages
+  apt: 
+    pkg:
+    - htop
+    - mc
+    - lynx
+    - tree
+    - ncdu
+  state: installed
