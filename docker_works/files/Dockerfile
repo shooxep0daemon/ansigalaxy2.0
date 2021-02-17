@@ -1,5 +1,4 @@
 FROM tomcat:7.0.108-jdk8
-RUN apt-get install maven -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello
 WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package
