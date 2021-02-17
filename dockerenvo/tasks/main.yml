@@ -1,11 +1,13 @@
 ---
 # tasks file for dockerenvo
-- name: Ensure that DOCKER daemon is present
+- name: Ensure that DOCKER daemon and Python env is present
   apt:
     pkg:
       - docker.io
       - python-pip
       - python-docker
+      - python3
+      - python3-pip
     state: present
     update_cache: yes
 
