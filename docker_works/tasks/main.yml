@@ -28,7 +28,7 @@
   docker_image:
     name: '{{ my_boxfuse }}'
     build:
-      path: /tmp/buildme/Dockerfile
+      path: /tmp/buildme/
       source: build
     state: present
     push: yes
