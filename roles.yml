@@ -11,4 +11,4 @@
   become: yes
 
   roles:
-   - builder_host
+   - docker_host
