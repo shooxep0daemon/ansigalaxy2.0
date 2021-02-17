@@ -4,8 +4,8 @@
   become: yes
 
   roles: 
-   - dockerhubconn
    - dockerenvo
+   - dockerhubconn
    - docker_works
 
 - name: runner env server
@@ -13,6 +13,6 @@
   become: yes
 
   roles:
-   - dockerhubconn
    - dockerenvo
+   - dockerhubconn
    - docker_host
