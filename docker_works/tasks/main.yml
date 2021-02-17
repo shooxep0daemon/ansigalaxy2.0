@@ -22,7 +22,7 @@
 - name: Ensure image is build and pushed from target to DH
   docker_image:
     build:
-      path: Dockerfile
+      dockerfile: Dockerfile
     name: '{{ my_boxfuse }}'
     push: yes
     source: build
