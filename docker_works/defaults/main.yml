@@ -11,3 +11,4 @@ dhub_passwd: !vault |
           6665
 
 my_boxfuse: shooxep0daemon/boxfuse:latest
+dest_dockerfile: /home/buildme
