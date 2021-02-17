@@ -2,7 +2,7 @@
 # tasks file for docker_host
 - name: Pull an image fromy our DH and run it
   docker_container:
-    name: '{{ my_boxfuse }}'
+    name: boxfuse1
     image: '{{ my_boxfuse }}'
     state: started
     pull: true
