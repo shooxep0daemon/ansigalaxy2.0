@@ -5,6 +5,7 @@
     pkg:
       - docker.io
       - python-pip
+      - python-docker
     state: present
     update_cache: yes
 
