@@ -8,10 +8,17 @@
 
 - name: Ensure that DOCKER daemon is present
   apt:
-    name: docker.io
+    pkg:
+      - docker.io
+      - python-pip
     state: present
     update_cache: yes
 
+- name: Ensure module docker-pu is present
+  pip:
+    name: docker-py
+    state: present
+ 
 - name: Ensure image is build and pushed from target to DH
   docker_image:
     build:
