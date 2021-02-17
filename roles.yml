@@ -1,17 +1,14 @@
 ---
-- name: web-server configuration
+- name: builder env server
   hosts: web
   become: yes
 
   roles: 
-   - common
-   - webserver
-   - security
+   - docker_works
 
-- name: db configuration
+- name: runner env server
   hosts: builder
   become: yes
 
   roles:
-   - common
-   - security 
+   - builder_host
