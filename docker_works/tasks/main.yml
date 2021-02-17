@@ -25,6 +25,7 @@
     dest: /tmp/buildme/Dockerfile
 
 - name: Ensure image is build and pushed from target to DH
+  become: yes
   docker_image:
     name: '{{ my_boxfuse }}'
     build:
